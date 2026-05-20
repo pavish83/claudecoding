@@ -25,3 +25,33 @@ b {
   font-family: "Hubot Sans", sans-serif;
   color: var(--pico-color-violet-500);
 }
+
+.member-detail {
+  display: flex;
+  gap: 1rem;
+}
+
+.member-detail img {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .member-detail {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .member-detail img {
+    width: 130px;
+  }
+
+  .member-detail h1 {
+    --pico-font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .member-detail p {
+    font-size: 0.95rem;
+  }
+}

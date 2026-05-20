@@ -11,8 +11,8 @@ function Nav({ cast, onChoice }) {
         <li><ToggleTheme /></li>
         <li>
           <details className="dropdown">
-            <summary>Cast</summary>
-            <ul dir="rtl">
+            <summary style={{ fontSize: '0.8rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Cast</summary>
+            <ul dir="rtl" style={{ fontSize: '0.8rem' }}>
               {cast.map(member => (
                 <li key={member.id}>
                   <a href="#" onClick={() => { onChoice(member) }}>{member.name}</a>
