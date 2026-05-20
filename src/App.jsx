@@ -9,7 +9,6 @@ import "@picocss/pico/css/pico.colors.css";
 import "./App.css";
 
 function App() {
-  const name = 'Stargazers';
   let [cast, setCast] = useState([]);
   let [memberInfo, setMemberInfo] = useState(null);
 
@@ -20,14 +19,14 @@ function App() {
 
   useEffect(() => {
     fetchCast();
-  });
+  }, []);
 
   return (
     <div className="container">
       <Nav cast={cast} onChoice={(info) => { setMemberInfo(info) }} />
       <img src="images/group.svg" alt="StarGazers Group" />
       <hgroup>
-        <h1>Meet the {name}</h1>
+        <h1>Meet the Stargazers</h1>
         <p>Members of an <b>intergalactic alliance</b> paving the way for peace and benevolence among all species. They are known for their enthusiasm for science, for their love of fun, and their dedication to education.</p>
       </hgroup>
       {memberInfo &&
